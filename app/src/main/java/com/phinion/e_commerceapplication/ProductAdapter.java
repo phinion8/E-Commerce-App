@@ -40,6 +40,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.binding.productTitle.setText(product.getName());
         Glide.with(context)
                 .load(product.getImage())
+                .fitCenter()
                 .into(holder.binding.productImage);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
